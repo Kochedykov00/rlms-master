@@ -1,0 +1,12 @@
+<h3>My courses: </h3>
+
+<% @courses.each do |course| %>
+  <%if course.teacher_id == current_teacher.id%>
+  <div class='well'>
+  <h3><%= course.title%></h3>
+  <%= link_to "edit", edit_teachers_course_path(course), :class => 'btn btn-warning'%>
+  <%= link_to "Open course", teachers_course_path(course), :class => 'btn btn-default'%>
+  <%= link_to "Delete course", teachers_course_path(course), method: :delete, :class => 'btn btn-default'%>
+  </div>
+  <% end %>
+<% end %>

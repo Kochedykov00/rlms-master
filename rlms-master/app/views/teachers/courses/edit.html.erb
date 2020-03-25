@@ -1,0 +1,10 @@
+<h3>Editing</h3>
+<%= form_for [:teachers, @course] do |f|%>
+<p>Name</p>
+<%= f.text_field(:title,{:class => 'form-control'})%>
+<br>
+<p>Description</p>
+<%= f.text_field(:body,{:class => 'form-control'})%>
+
+<%= f.submit({:class => 'btn btn-success' })%>
+<% end%>
